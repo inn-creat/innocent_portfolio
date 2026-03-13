@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './app.css';
+import './App.css';
 import Navbar from './navbar';
 import genphoto from './assets/genphoto.png'; 
 import coffee from './assets/coffee.png';
