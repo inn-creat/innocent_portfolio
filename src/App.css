@@ -8,6 +8,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 :root {
   --brown:#463730;
@@ -23,6 +24,8 @@ html {
 body{
   font-family: "Open Sans", sans-serif;
   background-color: var(--brown);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 section {
@@ -38,6 +41,7 @@ section {
   width: 100%;
   position: fixed;
   z-index: 100;
+  box-sizing: border-box;
 }
 .logo{
   color: var(--dark-blue);
@@ -71,6 +75,8 @@ section{
   padding: 80px 20px;
   color: white;
   transition: background 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 section:target {
@@ -193,6 +199,8 @@ section:target {
   max-width: 1100px;
   margin: 0 auto;
   align-items: start;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-info h2 {
@@ -385,6 +393,7 @@ section:target {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 99;
+    box-sizing: border-box;
   }
 
   .logo-link.open {
@@ -479,39 +488,83 @@ section:target {
 }
 
 @media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .navbar {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
   }
 
   .logo {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 60px 1rem;
   }
 
   .logo-link ul {
     gap: 1rem;
+    padding: 1rem;
   }
 
   .head-text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .head-text span {
-    font-size: 1.5rem;
-  }
-
-  .head-text h3 {
     font-size: 1.2rem;
   }
 
+  .head-text h3 {
+    font-size: 1rem;
+  }
+
+  .head-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .link {
+    gap: 0.5rem;
+  }
+
+  .link img {
+    width: 24px;
+    height: 24px;
+  }
+
   .project a {
-    width: 90%;
+    width: 95%;
+    max-width: 280px;
   }
 
   .contact-form {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .contact-info h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  .contact-detail {
+    gap: 0.8rem;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .form-submit {
+    font-size: 0.9rem;
+    padding: 0.8rem;
   }
 }
